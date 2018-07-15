@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{outline} \usepackage{pmgraph} \usepackage[normalem]{ulem}
+\usepackage{graphicx} \usepackage{verbatim}
+\begin{document}
+ \title{\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=4in]{logo.png}\\
+ \end{figure}\textbf{Weekly Work Report}}
+\author{Liangjie Cao \\
+    \vspace*{0.5in} \\ 
+    \textbf{VISION@OUC} \\
+    \vspace*{1in}
+}
+\date{\today}
+\maketitle
+\newpage
+\section{My first feeling}
+\par This week, I start to learning the course called ``Deep learning" teached by professor Wu. In the first class, he help us have a brief acknowledgement of this course. Deep learning, is a way to training neural networks. Then a traditional example ``the price of house" follows behind. This means that the rule of this example is liner regression. Actually this model is a single neural network. Many single neuron stack to neural network. In one sentence, where there is more inputs, there is more data to be trained.
+\section{Some introduction about deep learning}
+Then comes to the next day, professor Wu tell us what is Supervised learning, the typical learning model nowadays. He says the advertisers get the most profit from deep learning. Because when we surf the Internet, the website will record our habits, then the advertisers will send us the ads which we will click it. Actually most times we do this. The huge database give fully data to train their model so they can get what we want. Then professor Wu give some examples of some models in some field. For CNN can be used in image applications, RNN is mostly used in sequence data. And structured data and instructed data have their own meaning, we can't confuse them. In the end, he says there is a mysterious scene in deep learning field. When the neural network recognizes a cat, it means the model has a good beginning.
+ \begin{figure}[!htbp]
+ \centering
+ \includegraphics[width=0.5\textwidth]{model1.png}\\
+ \caption{Trendcy of the function}\label{Figure1}
+ \end{figure}
+\section{Practice}
+Professor Wu has prepared some unique practice for us to strengthen our remember ship. These ten questions make a summary of the course he has taught to us. To be honest, I haven't buy the course from Coursera so I do this practice and find the answer from the website. I corrected the wrong answer I've done. Now I know AI is the new electricity because it is transforming multiple industries. 
+\section{Logistic Regression}
+Professor Wu then taught us the typical training model, logistic regression. If $x$ is our input and $y$ is the output. $\omega\in{R}$ and $b\in{R}$ are the parameters. Then we can get the regression function as follows:
+\begin{equation}\label{Eq1}
+\hat{y}=\sigma(\omega^T{x}+b)
+\end{equation}
+\par And Figure~\ref{Figure1} shows the trendcy of this function. Then the cost function and the loss function of this training model can be concluded:
+ \begin{equation}\label{Eq2}
+ \pounds(\hat{y},y)=-(ylog(\hat{y})+(1-y)log(1-\hat{y}))
+ \end{equation}
+ \begin{equation}\label{Eq3}
+ J(\omega,b)=\frac{1}{m}\sum_{i=1}^{m}\pounds(\hat{y},y)
+ \end{equation}
+ \par where Eq.~\ref{Eq2} is the loss function and Eq.~\ref{Eq3} is the cost function. This can be seen as a tiny neural network. The loss function measures the performance of single training sample. 
+\section{Graient Descent}
+For this part, maybe the title seems very difficult, but this is only descent the function. As Chinese students, derivatives is very familiar to us. This process is to get the derivative of the cost function(Eq.~\ref{Eq4}). 
+\begin{equation}\label{Eq4}
+\omega=\omega-\alpha\frac{dJ(\omega)}{d\omega}
+\end{equation}
+\section{Computation graph}
+Professor Wu says this is the main method to make sure we have a specific cognition of our training model. We can see a example that Professor Wu have shown to us in Figure~\ref{Figure2}.
+ \begin{figure}[!htbp]
+ \centering
+ \includegraphics[width=0.5\textwidth]{mod.png}\\
+ \caption{Graph of a simple model}\label{Figure2}
+ \end{figure}
+\par In this figure, we can easily get the relationship between these variables. For instance, if we put $a$ equals 5.001, then $v$ will be 11.001, and $J$ will be 33.003. We can also make this process backwards rather than forwards. It's a Two-way process.
+\section{Conclusion}
+After taking this week's course, I have a new sense of deep learning. In the past, I think this is a very unfamiliar thing to me. The main purpose of professor Wu is to train more and more people to master deep learning. I hope after learning this course, I can build a deep neural network and neural network with many layers, and see it work for me.
+\end{document}
